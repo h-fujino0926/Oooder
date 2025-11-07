@@ -1,2 +1,43 @@
 <!-- 注文履歴のページ -->
-<h1>注文履歴</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>注文履歴</title>
+</head>
+<body>
+    <h1>注文履歴</h1>
+
+    <!-- 注文がある場合 -->
+    <!-- Djangoでは {% for order in orders %} でループさせます -->
+    <div>
+        <h2>注文一覧</h2>
+
+        <!-- 1件の注文 -->
+        <div>
+            <h3>注文番号：{{ order.id }}</h3>
+            <p>注文日：{{ order.created_at }}</p>
+            <p>合計金額：¥{{ order.total_price }}</p>
+            <p>ステータス：{{ order.status }}</p>
+
+            <h4>注文内容：</h4>
+            <ul>
+                <!-- 注文された商品一覧 -->
+                {% for item in order.items %}
+                    <li>
+                        {{ item.product_name }} × {{ item.quantity }}　
+                        ¥{{ item.subtotal }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
+
+    <!-- 注文がない場合 -->
+    {% if not orders %}
+        <p>まだ注文履歴はありません。</p>
+    {% endif %}
+
+    <a href="/me

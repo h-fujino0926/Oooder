@@ -1,3 +1,28 @@
-<!-- QRコードを読み込んだらここにページ遷移する -->
-<!-- ゲストかログインを選択する -->
-<h1>ようこそ</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ようこそ</title>
+</head>
+<body>
+    <h1>ようこそ！</h1>
+
+    <p>ご利用方法を選んでください。</p>
+
+    <!-- ボタンエリア -->
+    <div>
+        <a href="/login/">
+            <button>ログインして利用</button>
+        </a>
+        <a href="/guest/">
+            <button>ゲストとして利用</button>
+        </a>
+    </div>
+
+    <!-- 写真を入れるエリア -->
+    <div>
+        <img src="{% static 'images/welcome.png' %}" alt="お店の写真" width="400">
+    </div>
+</body>
+</html>

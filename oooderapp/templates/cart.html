@@ -1,2 +1,57 @@
-<!-- カートのページ -->
-<h1>カート</h1>
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>カート</title>
+</head>
+
+<body>
+
+    <h1>カート</h1>
+
+    <!-- カートに商品がある場合 -->
+    <div>
+        <div>
+            <img src="商品画像URL" alt="商品画像">
+            <div>
+                <p>商品名：ハンバーグ定食</p>
+                <p>オプション：ご飯大盛り（＋¥100）</p>
+                <p>数量：1</p>
+                <p>小計：¥1,200</p>
+            </div>
+        </div>
+
+        <div>
+            <img src="商品画像URL" alt="商品画像">
+            <div>
+                <p>商品名：チーズケーキ</p>
+                <p>オプション：限定5食（残り2）</p>
+                <p>数量：2</p>
+                <p>小計：¥1,000</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <p>合計：¥2,200</p>
+
+        <form action="/checkout/" method="post">
+            <!-- CSRFトークン（Django用） -->
+            {% csrf_token %}
+            <button type="button" onclick="location.href='/menu/'">メニューに戻る</button>
+            <button type="submit">支払いへ進む</button>
+        </form>
+    </div>
+
+    <!-- カートが空の場合 -->
+    <!--
+  <div>
+    <p>カートは空です。</p>
+    <a href="/menu/">メニューに戻る</a>
+  </div>
+  -->
+
+</body>
+
+</html>
