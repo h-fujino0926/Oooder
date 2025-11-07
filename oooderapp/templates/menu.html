@@ -1,2 +1,65 @@
 <!-- 商品ページ -->
-<h1>メニュー</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>メニュー</title>
+</head>
+<body>
+    <h1>メニュー一覧</h1>
+
+    <h2>フード</h2>
+
+    <div>
+        <h3>ハンバーグプレート</h3>
+        <p>価格：¥1,200</p>
+        <p>ジューシーなハンバーグに自家製ソースをたっぷり。</p>
+        <p>残り：3 / 10</p>
+
+        <h4>オプション</h4>
+        <ul>
+            <li>チーズトッピング +¥100</li>
+            <li>大盛り +¥150</li>
+        </ul>
+
+        <form>
+            <label>数量：</label>
+            <input type="number" name="quantity" value="1" min="1">
+            <button type="submit">カートに追加</button>
+        </form>
+        <hr>
+    </div>
+
+    <div>
+        <h3>日替わりランチ</h3>
+        <p>価格：¥1,000</p>
+        <p>本日のおすすめランチメニュー。</p>
+        <p>残り：0 / 5</p>
+        <p><strong>（販売終了）</strong></p>
+        <hr>
+    </div>
+
+    <h2>ドリンク</h2>
+
+    <div>
+        <h3>アイスコーヒー</h3>
+        <p>価格：¥400</p>
+        <p>深煎り豆を使った香り高い一杯。</p>
+
+        <h4>オプション</h4>
+        <ul>
+            <li>ミルク追加 +¥50</li>
+            <li>シロップ追加 +¥30</li>
+        </ul>
+
+        <form>
+            <label>数量：</label>
+            <input type="number" name="quantity" value="1" min="1">
+            <button type="submit">カートに追加</button>
+        </form>
+        <hr>
+    </div>
+
+    <a href="cart.html">カートを見る</a>
+</body>
+</html>
