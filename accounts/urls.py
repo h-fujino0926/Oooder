@@ -16,4 +16,9 @@ urlpatterns = [
      path('logout/',
           auth_views.LogoutView.as_view(template_name='logout.html'),
           name='logout'),
+
+# ログイン機能が動作しているか確認するためのURL
+     path('profile/',
+          views.profileView.as_view(),
+          name='profile'),
 ]

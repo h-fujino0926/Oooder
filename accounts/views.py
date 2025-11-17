@@ -20,3 +20,7 @@ class SignUpSuccessView(TemplateView):
 
 class LoginView(TemplateView):
     template_name = 'login.html'
+
+# ログイン機能が動作しているか確認するためのview
+class profileView(TemplateView):
+    template_name = 'profile.html'
