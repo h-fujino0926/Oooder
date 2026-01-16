@@ -20,3 +20,5 @@ hello
 {% else %}
 ログインできてない
 {% endif %}
+<!-- ログアウト画面への遷移 -->
+<li><a href="{% url 'accounts:logout' %}" class="text-white">ログアウト</a></li>
