@@ -1,3 +1,5 @@
+{% if user.is_authenticated %}
+
 hello
 <!-- メニュー画面への遷移 -->
 <li><a href="{% url 'oooderapp:menu' %}" class="text-white">メニュー</a></li>
@@ -15,3 +17,6 @@ hello
 <li><a href="{% url 'accounts:signup' %}" class="text-white">会員登録</a></li>
 <!-- ログイン画面への遷移 -->
 <li><a href="{% url 'accounts:login' %}" class="text-white">ログイン</a></li>
+{% else %}
+ログインできてない
+{% endif %}
